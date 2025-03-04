@@ -1,0 +1,87 @@
+<form action="/cricket/addOrEdit" method="post">
+  <input type="hidden" name="_id" value="{{score._id}}" />
+  <div class="form-floating mb-3">
+    <input
+      name="team"
+      class="form-control"
+      placeholder="Your Team"
+      required
+      value="{{score.team}}"
+    />
+    <label>Your Team</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      name="opponent"
+      class="form-control"
+      placeholder="Opponent Team"
+      required
+      value="{{score.opponent}}"
+    />
+    <label>Opponent Team</label>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <div class="form-floating mb-3">
+        <input
+          type="number"
+          name="runs"
+          class="form-control"
+          placeholder="Runs"
+          required
+          min="0"
+          value="{{score.runs}}"
+        />
+        <label>Runs</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating mb-3">
+        <input
+          type="number"
+          name="wickets"
+          class="form-control"
+          placeholder="Wickets"
+          required
+          min="0"
+          value="{{score.wickets}}"
+        />
+        <label>Wickets</label>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <div class="form-floating mb-3">
+        <input
+          type="number"
+          name="overs"
+          class="form-control"
+          placeholder="Overs"
+          required
+          min="0"
+          value="{{score.overs}}"
+        />
+        <label>Overs</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating mb-3">
+        <input
+          type="date"
+          name="matchDate"
+          class="form-control"
+          required
+          value="{{score.matchDate}}"
+        />
+        <label>Match Date</label>
+      </div>
+    </div>
+  </div>
+  <div class="float-end">
+    <a href="/cricket" class="btn btn-outline-secondary">☰ View All</a>
+    <button type="submit" class="btn btn-success">
+      Submit
+    </button>
+  </div>
+</form>
